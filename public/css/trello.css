@@ -1,0 +1,215 @@
+.trello {
+    width: 100%;
+    background-color: #4a5568;
+
+    --trello-button-fg-color: white;
+
+    --trello-button-bg-disabled: #555;
+    --trello-button-fg-disabled: #DDD;
+
+    --trello-button-bg-blue: #2563eb;
+    --trello-button-bg-hover-blue: #163c8e;
+    --trello-button-bg-active-blue: #123175;
+
+    --trello-button-bg-teal: #1ba2b4;
+    --trello-button-bg-hover-teal: #13707c;
+    --trello-button-bg-active-teal: #0f5862;
+
+    --trello-button-bg-green: #30d000;
+    --trello-button-bg-hover-green: #2bb702;
+    --trello-button-bg-active-green: #1b7700;
+}
+
+.trello-button {
+    display: inline-block;
+
+    color: var(--trello-button-fg-color);
+    background-color: var(--trello-button-bg-color);
+
+    margin-right: 10px;
+    padding: 8px;
+
+    border-radius: 5%;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: color 0.25s, background-color 0.25s, opacity 0.25s;
+}
+
+.trello-button.trello-board-button.trello-selected,
+.trello-button.trello-create-board,
+.trello-button.trello-create-column,
+.trello-button.trello-create-item {
+    --trello-button-bg-color: var(--trello-button-bg-blue);
+}
+.trello-button.trello-board-button.trello-selected:hover,
+.trello-button.trello-create-board:hover,
+.trello-button.trello-create-column.trello-enabled:hover,
+.trello-button.trello-create-item:hover {
+    --trello-button-bg-color: var(--trello-button-bg-hover-blue);
+}
+.trello-button.trello-board-button.trello-selected:active,
+.trello-button.trello-create-board:active,
+.trello-button.trello-create-column.trello-enabled:active,
+.trello-button.trello-create-item:active {
+    --trello-button-bg-color: var(--trello-button-bg-active-blue);
+}
+
+.trello-button.trello-board-button {
+    --trello-button-bg-color: var(--trello-button-bg-teal);
+}
+.trello-button.trello-board-button:hover {
+    --trello-button-bg-color: var(--trello-button-bg-hover-teal);
+}
+.trello-button.trello-board-button:active {
+    --trello-button-bg-color: var(--trello-button-bg-active-teal);
+}
+
+.trello-button.trello-board-button {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.trello-button.trello-create-column {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.trello-button.trello-create-column.trello-enabled {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.trello-button.trello-create-item {
+    width: 100%;
+
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.trello-board-list {
+    display: inline-block;
+    border-left: 1px solid black;
+    padding-left: 15px;
+}
+
+.trello-header {
+    border-bottom: 1px solid black;
+    min-height: 50px;
+    padding: 15px;
+}
+
+.trello-board-columns {
+    height: 600px;
+}
+
+.trello-column {
+    --margin: 15px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    color: black;
+    background: #BBB;
+
+    width: 300px;
+    max-height: calc(100% - calc(var(--margin) * 2));
+
+    margin: var(--margin);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    border-radius: 5px;
+}
+
+.trello-column-header {
+    padding: 15px;
+}
+
+.trello-column-title {
+    user-select: none;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.trello-column-body {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.trello-column-footer {
+    padding: 15px;
+}
+
+.trello-item {
+    position: relative;
+
+    background: white;
+
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.trello-item:last-child {
+    margin-bottom: 0;
+}
+
+.trello-item-content {
+    --font-size: 20px;
+    font-size: var(--font-size);
+    min-height: var(--font-size);
+    user-select: none;
+    overflow-wrap: break-word;
+}
+.trello-item-content:focus {
+    outline: 0 solid transparent;
+}
+
+.trello-item-edit {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+}
+
+.trello-item-remove {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+
+    cursor: pointer;
+}
+
+.trello-column:not(.trello-item-editing) .trello-item:not(.ui-sortable-helper):hover > .trello-item-edit,
+.trello-column:not(.trello-item-editing) .trello-item:not(.ui-sortable-helper):hover > .trello-item-remove {
+    display: block;
+}
+
+.trello-column-draggable-placeholder,
+.trello-item-draggable-placeholder {
+    visibility: hidden;
+}
+.trello-item.ui-sortable-helper {
+    left: auto !important;
+}
+
+.trello-column-header:hover {
+    cursor: grab;
+}
+.trello-column-header:hover:active {
+    cursor: grabbing;
+}
+
+.trello-column:not(.trello-item-editing) .trello-item:hover {
+    cursor: grab;
+}
+.trello-column:not(.trello-item-editing) .trello-item:hover:active {
+    cursor: grabbing;
+}

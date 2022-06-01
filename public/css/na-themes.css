@@ -1,0 +1,62 @@
+.na-theme.na-theme-lavender {
+    --na-topbar-fg: #000;
+    --na-topbar-bg: #5454ff;
+
+    --na-topbar-item-fg: #000;
+    --na-topbar-item-bg: #c1c9ff;
+    --na-topbar-item-fg-hover: #fff;
+    --na-topbar-item-bg-hover: var(--na-body-bg);
+    --na-topbar-item-fg-selected: var(--na-topbar-item-fg);
+    --na-topbar-item-bg-selected: linear-gradient(0deg, var(--na-body-bg), var(--na-topbar-item-bg));
+
+    --na-header-fg: #fff;
+    --na-header-bg: #8a88ff;
+
+    --na-body-fg: #000;
+    --na-body-bg: #888;
+
+    --na-panel-fg: #000;
+    --na-panel-bg: #bbb;
+}
+
+.na-theme.na-theme-aqua {
+    --na-topbar-fg: #000;
+    --na-topbar-bg: #9EEFE5;
+
+    --na-topbar-item-fg: #000;
+    --na-topbar-item-bg: #75afa8;
+    --na-topbar-item-fg-hover: #000;
+    --na-topbar-item-bg-hover: var(--na-body-bg);
+    --na-topbar-item-fg-selected: var(--na-topbar-item-fg);
+    --na-topbar-item-bg-selected: linear-gradient(0deg, var(--na-body-bg), var(--na-topbar-item-bg));
+
+    --na-header-fg: #000;
+    --na-header-bg: #C0E0DE;
+
+    --na-body-fg: #000;
+    --na-body-bg: #888;
+
+    --na-panel-fg: #000;
+    --na-panel-bg: #aaa;
+}
+
+.na-theme.na-theme-basic {
+    --na-topbar-fg: #FFF;
+    --na-topbar-bg: #000;
+
+    --na-topbar-item-fg: #FFF;
+    --na-topbar-item-bg: #000;
+    --na-topbar-item-fg-hover: #000;
+    --na-topbar-item-bg-hover: #AAA;
+    --na-topbar-item-fg-selected: #FFF;
+    --na-topbar-item-bg-selected: linear-gradient(0deg, var(--na-body-bg), #FFF);
+
+    --na-header-fg: #000;
+    --na-header-bg: #C0E0DE;
+
+    --na-body-fg: #FFF;
+    --na-body-bg: #000;
+
+    --na-panel-fg: #FFF;
+    --na-panel-bg: #000;
+}
